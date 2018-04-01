@@ -1,4 +1,4 @@
-public class LinkedList() {
+public class LinkedList {
   protected Node start;
   protected Node end;
   public int size;
@@ -11,17 +11,17 @@ public class LinkedList() {
   }
 
   // Function to check if the list is Empty
-  public function isEmpty() {
+  public boolean isEmpty() {
     return start == null;
   }
 
   // Function to get current length of the list
-  public function getLength() {
+  public int getLength() {
     return size;
   }
 
   // Add node at the start of the list
-  public function addAtStart(int value) {
+  public void addAtStart(int value) {
     Node n = new Node(value);
     size++;
     if (start == null) {
@@ -34,7 +34,7 @@ public class LinkedList() {
   }
 
   // Add node at the end of the list 
-  public function addAtEnd(int value) {
+  public void addAtEnd(int value) {
     Node n = new Node(value);
     size++;
     if (start == null) {
@@ -46,16 +46,16 @@ public class LinkedList() {
     }
   }
 
-  public function printList() {
+  public void printList() {
     System.out.println("Singly Linked List ->");
     if (size == 0) {
       System.out.println("Empty List");
     } else {
       Node currentNode = start;
-      for (int i = 0; i < size; i++) {
-        System.out.println(i + "->" + currentNode.getValue());
+      do {
+        System.out.print(currentNode.getValue() + " -> ");
         currentNode = currentNode.getNext();
-      }
+      } while (currentNode.getNext() != null);
     }
   }
 }

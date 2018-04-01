@@ -23,13 +23,13 @@ public class Node {
   }
 
   // Function to set the Link
-  public setNext (Node next) {
+  public void setNext (Node next) {
     this.next = next;
   }
 
   // Function to set the value of the node
-  public setValue (int value) {
-    this.value = value
+  public void setValue (int value) {
+    this.value = value;
   }
 
   // Function to get Link to the next Node
